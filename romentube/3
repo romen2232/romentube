@@ -1,0 +1,4 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: Django in /usr/local/lib/python3.10/dist-packages (4.1.6)
+Requirement already satisfied: asgiref<4,>=3.5.2 in /usr/local/lib/python3.10/dist-packages (from Django) (3.6.0)
+Requirement already satisfied: sqlparse>=0.2.2 in /usr/local/lib/python3.10/dist-packages (from Django) (0.4.3)

@@ -27,7 +27,6 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=255, unique=True)
-    email = models.EmailField(max_length=255, unique=True,)
     name = models.CharField(max_length=255, blank=True, null=True)
     last_name = models.CharField(max_length=255, blank=True, null=True)
     image = models.ImageField(
@@ -42,7 +41,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = 'Users'
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email', 'name', 'last_name']
+    REQUIRED_FIELDS = ['username', 'name', 'last_name']
 
     def __str__(self):
         return f'{self.name} {self.last_name}'
